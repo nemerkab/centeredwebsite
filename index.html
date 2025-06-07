@@ -77,6 +77,25 @@
         display: inline-block;
         text-decoration: none;
       }
+      /* Minimal portfolio styling */
+      .portfolio-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .portfolio-item {
+            margin-bottom: 1.5rem;
+        }
+        .portfolio-item a {
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: #000;
+            text-decoration: none;
+        }
+        .portfolio-item p {
+            margin: .3rem 0 0 0;
+            font-size: .95rem;
+        }
     </style>
 </head>
 <body>
@@ -107,15 +126,23 @@
         <hr style="border-color: #ccc"/>
 
 
-        <div style="padding-top:0px;">
+        <div>
             <h2>Portfolio</h2>
-            <p>
-                <b><a href="https://honeydone.com" target="_blank">HoneyDone</a></b> - A tech enabled property manager for every homeowner.
-                <br />
-                <b>Investment 2</b> - To be announced soon.
-                <br />
-                <b>Investment 3</b> - Currently scouting.
-            </p>
+            <ul class="portfolio-list">
+                <li class="portfolio-item">
+                    <a href="https://honeydone.com" target="_blank">HoneyDone</a> (Stage 2 of 5) ●●○○○
+                    <p>A tech-enabled property manager for every homeowner.</p>
+                </li>
+                <li class="portfolio-item">
+                    <a href="#">Investment 2</a> (Stage 1 of 5) ●○○○○
+                    <p>To be announced soon.</p>
+                </li>
+                <li class="portfolio-item">
+                    <a href="#">Investment 3</a> (Stage 0 of 5) ○○○○○
+                    <p>Currently scouting.</p>
+                </li>
+            </ul>
+            <p>We are targeting 15 portfolio companies by 2030.</p>
         </div>
 
       <div>
