@@ -1,161 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- 01 -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Centered: The Venture Studio</title>
-    <style>
-        body {
-            margin: 0;
-            padding-left:15%;
-            padding-right:15%;
-            background-color: #fafafa;
-            color: #000;
-            font-family: Arial, sans-serif;
-            font-size: 16px;
-            line-height: 1.5;
-            display: flex;
-            flex-direction: column;
-            height: 80vh;
-            text-align: left;
-        }
-
-        h1 {
-            font-size: 2.5rem;
-            margin: 0;
-        }
-        h2 {
-            font-size: 1.5rem;
-        }
-        p {
-            font-size:1rem;
-        }
-
-        a {
-            color: #000;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        a:hover {
-            color: #f00;
-            border-color: #f00;
-        }
-
-        .button {
-            display: inline-block;
-            margin-top: 2rem;
-            padding: 1rem 2rem;
-            background-color: #000;
-            color: #fff;
-            text-transform: uppercase;
-            font-size: 1rem;
-            font-weight: bold;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        .button:hover {
-            background-color: #f00;
-        }
-
-        #content {
-            max-width:600px;
-            margin-top:100px;
-        }
-        .footer {
-            
-            font-size: 0.75rem;
-            margin-top: 100px;
-        }
-      .linkedin-icon svg:hover {
-        stroke: gray;
-        transition: stroke 0.3s ease;
-      }
-
-      .linkedin-icon {
-        display: inline-block;
-        text-decoration: none;
-      }
-      /* Minimal portfolio styling */
-      .portfolio-list {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-        .portfolio-item {
-            margin-bottom: 1.5rem;
-        }
-        .portfolio-item a {
-            font-size: 1.1rem;
-            font-weight: bold;
-            color: #000;
-            text-decoration: none;
-        }
-        .portfolio-item p {
-            margin: .3rem 0 0 0;
-            font-size: .95rem;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Centered</title>
+  <meta name="description" content="We work alongside founders to design, launch, and grow businesses that last. From the first paying customer to a clear growth path, we bring the focus and follow-through that early-stage companies need most." />
+  <style>
+    :root {
+      --bg: #fafafa;
+      --text: #000;
+      --muted: #666;
+      --rule: #d9d9d9;
+      --accent: #f00;
+      --maxw: 62ch;
+      --pad-x: clamp(1rem, 5vw, 15%);
+    }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: var(--text); font-weight: 700; text-decoration: none; }
+    a:hover { color: var(--accent); }
+    a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+    .page { padding: 6vh var(--pad-x); }
+    header, main, footer { margin: 0 auto; max-width: var(--maxw); }
+    h1 { font-size: clamp(2rem, 4.5vw, 2.75rem); margin: 0 0 .5rem; font-weight: bold; }
+    h2 { font-size: 1.35rem; margin: 2.25rem 0 .5rem; }
+    p { margin: .75rem 0; }
+    hr { border: 0; border-top: 1px solid var(--rule); margin: 1.75rem 0; }
+    footer { color: var(--muted); font-size: .825rem; padding: 2rem 0 4rem; }
+  </style>
 </head>
 <body>
-    <div id="content" style="min-height:100vh;">
-        <h1>Centered</h1>
-        <p>Welcome to Centered: a no-nonsense venture studio taking a patient approach to building high potential businesses. 
-            
-            We didn't spend our time building a fancy website. 
-            
-            Instead, we are hard at work supporting our portfolio companies.
+  <div class="page">
+    <header aria-label="Site header">
+      <h1>Centered</h1>
+      <p>We work alongside founders to design, launch, and grow businesses that last. From the first paying customer to a clear growth path, we bring the focus and follow‑through that early‑stage companies need most.</p>
+      <p>For updates or to contact us, find us on <a href="https://www.linkedin.com/company/centered-vs/" target="_blank" rel="noopener noreferrer">LinkedIn</a>.</p>
+      <p>Based in Michigan, USA</p>
+      <hr />
+    </header>
+
+    <main id="content">
+      <section aria-labelledby="approach-h">
+        <h2 id="approach-h">Our approach</h2>
+        <p>
+          We help founders build calm, durable companies by starting with customers — not pitch decks. We bias toward shipping, early revenue, and learning loops.
         </p>
         <p>
-           For updates or to contact us, find us on <a href="https://www.linkedin.com/company/centered-vs/">LinkedIn</a>. 
+          <strong><a href="/notunicorns.html" target="_blank" rel="noopener noreferrer">Zebras and Camels, not Unicorns</a></strong> — Building enduring companies that make an impact.<br />
+          <strong><a href="/refounding.html" target="_blank" rel="noopener noreferrer">Refounding</a></strong> — Some startups deserve a second chance.
         </p>
+      </section>
 
-        <p>Based in Michigan, USA</p>
-        <br />
-        <hr style="border-color: #ccc"/>
-        <div style="padding-top:0px;">
-            <h2>Our approach</h2>
-            <p>
-                <b><a href="/notunicorns.html" target="_blank">Zebras and Camels, not Unicorns</a></b> - Building enduring companies that make an impact.
-                <br />
-                <b><a href="/refounding.html" target="_blank">Refounding</a></b> - Some startups deserve a second chance.
-            </p>        
-        </div>
-        <br />
-        <hr style="border-color: #ccc"/>
+      <hr />
 
+      <section aria-labelledby="programs-h">
+        <h2 id="programs-h">Programs</h2>
+        <p>
+          <strong><a href="/accelerator.html" target="_blank" rel="noopener noreferrer">Customer Funded Startup Accelerator</a></strong> — An 8‑week, equity‑free hybrid program for West Michigan founders to validate ideas, presell offers, and build early traction through high‑velocity sales sprints.
+        </p>
+        <p>
+          <strong>Centered Sessions</strong> — Short, practical community events for founders and operators covering topics from customer discovery to pricing in an open, collaborative format.
+        </p>
+      </section>
 
-        <div>
-            <h2>Portfolio</h2>
-            <ul class="portfolio-list">
-                <li class="portfolio-item">
-                    <a href="https://honeydone.com" target="_blank">HoneyDone</a> (Stage 2 of 5) ●●○○○
-                    <p>A tech-enabled property manager for every homeowner.</p>
-                </li>
-                <li class="portfolio-item">
-                    <a href="#">Investment 2</a> (Stage 1 of 5) ●○○○○
-                    <p>To be announced soon.</p>
-                </li>
-                <li class="portfolio-item">
-                    <a href="#">Investment 3</a> (Stage 0 of 5) ○○○○○
-                    <p>Currently scouting.</p>
-                </li>
-            </ul>
-            <p>We are targeting 15 portfolio companies by 2030.</p>
-        </div>
+      <hr />
 
-      <div>
-        <a href="https://www.linkedin.com/company/centered-vs/" target="_blank" style="display: inline-block; margin-top: 1rem;">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/e/e9/Linkedin_icon.svg" alt="LinkedIn" width="24" height="24" style="vertical-align: middle;">
-          </a>
-      </div>
+      <section aria-labelledby="notes-h">
+        <h2 id="notes-h">Notes</h2>
+        <p>We’re creating 15 Centered companies by 2030 and supporting many more. Portfolio details available on request.</p>
+      </section>
+    </main>
 
-       
-    </div>
-    <div class="footer">
-        &copy; 2025 Centered. Seriously good ventures.
-    </div>
+    <footer>
+      &copy; 2025 Centered. Seriously good ventures.
+    </footer>
+  </div>
 </body>
 </html>
