@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Startup Dinners - Centered</title>
+  <style>
+    /* Base Styles */
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; color: #000; background: #fff; }
+    h1, h2, h3 { margin-bottom: 0.5em; }
+    ul { margin: 1em 0; padding-left: 1.2em; }
+    a { text-decoration: none; color: #000; }
+    .btn { display: inline-block; padding: 12px 24px; margin: 0.5em; background: #000; color: #fff; border-radius: 4px; }
+    .section { padding: 60px 20px; max-width: 1000px; margin: 0 auto; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
+    .card { background: #fff; border: 1px solid #ccc; border-radius: 8px; padding: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+    header.hero { 
+      background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.7)),
+                  url('https://storage.googleapis.com/centered-website/assets/startupdinner/CS5_0032T01.JPG');
+      background-size: cover;
+      background-position: center 0%;
+      background-attachment: fixed;
+      position: relative;
+      padding: 100px 0;
+    }
+    header.hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      z-index: 1;
+    }
+    header.hero .section { 
+      text-align: left;
+      position: relative;
+      z-index: 2;
+    }
+    header.hero h1 { font-size: 2.5em; margin-bottom: 0.3em; }
+    header.hero p { font-size: 1.2em; margin-bottom: 1em; }
+    .video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; margin: 20px 0; }
+    .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+    .two-column { display: flex; gap: 40px; align-items: flex-start; }
+    .two-column .content { flex: 1; }
+    .two-column .video-wrapper { flex: 1; min-width: 0; }
+    @media (max-width: 768px) {
+      .two-column { flex-direction: column; }
+    }
+    .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 20px; margin: 20px 0; text-align: center; }
+    .stat-item { padding: 20px; }
+    .stat-number { font-size: 2.5em; font-weight: bold; color: #000; margin: 0; }
+    .stat-label { font-size: 1em; color: #666; margin: 0; }
+    footer { background: #eee; text-align: center; padding: 40px 20px; }
+  </style>
+  <!-- Social Sharing Meta Tags -->
+  <meta property="og:title" content="Startup Dinners - Centered">
+  <meta property="og:description" content="Curated, small events designed to radically support founders. Join 2-3 founders and 8-12 service providers and investors for an evening of meaningful connections.">
+  <meta property="og:image" content="https://storage.googleapis.com/centered-website/assets/startup_dinners_og_image.png">
+  <meta property="og:url" content="https://centered.team/startup-dinners">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Startup Dinners - Centered">
+  <meta name="twitter:description" content="Curated, small events designed to radically support founders. Join 2-3 founders and 8-12 service providers and investors for an evening of meaningful connections.">
+  <meta name="twitter:image" content="https://storage.googleapis.com/centered-website/assets/startup_dinners_og_image.png">
+</head>
+<body>
+  <!-- Hero Section -->
+  <header class="hero" id="hero">
+    <div class="section">
+      <img src="https://storage.googleapis.com/centered-website/assets/Centered%20logo%20v2.png" alt="Centered Logo" style="max-width: 150px; display: block; margin-bottom: 20px;">
+      <h1>Startup Dinners</h1>
+      <p style="font-size: 1.8em;">Curated, small events designed to radically support founders. We bring founders together with service providers and investors to force collisions, spark meaningful connections, and enjoy a great meal.</p>
+      <a href="#apply" style="font-size: 1.6em;" class="btn">Get Involved</a>
+    </div>
+  </header>
+
+  <!-- The Idea -->
+  <section class="section" id="idea">
+    <h2>The Idea</h2>
+    <div class="two-column">
+      <div class="content">
+        <p>What would radically supporting a select number of startups look like? What if we got service providers and investors in the same room with startups that could benefit from their capital and services?</p>
+        <p>Michigan has terrific founders, ideas, investors, talent, and service providers, but they don't always find each other. Perhaps it's a density problem and reducing the space will create more collisions.</p>
+        <p>We proposed a one night event to bring together different aspects of our ecosystem into one room and sit around one table under the premise of doing what we can to support these startups.</p>
+      </div>
+      <div class="video-wrapper">
+        <div class="video-container">
+          <iframe src="https://www.youtube.com/embed/qZ4qyL2wLWE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <p style="text-align: center; color: #666; font-size: 0.9em;">Highlights from our previous Startup Dinner</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- what are startup dinners -->
+  <section class="section" id="about" style="background: #fafafa;">
+    <h2>What are Startup Dinners?</h2>
+    <p>Startup Dinners are intimate, high-value networking events where real relationships are built. Unlike large networking events where connections are fleeting, our dinners create an environment where founders can have deep, meaningful conversations with the people who can actually help them grow.</p>
+    <p>Each dinner brings together:</p>
+    <ul>
+      <li><strong>2-3 Featured Founders</strong> — Early-stage entrepreneurs working on ambitious ventures</li>
+      <li><strong>8-12 Service Providers & Investors</strong> — Experienced operators, advisors, VCs, angels, lawyers, accountants, marketers, and other experts</li>
+    </ul>
+    <p>The result? Genuine connections, actionable advice, potential partnerships, and the kind of support that founders rarely get access to in their early days.</p>
+  </section>
+
+  <!-- Event Structure -->
+  <section class="section" id="structure">
+    <h2>How It Works</h2>
+    <h3>A Typical Evening</h3>
+    <ul>
+      <li><strong>6:00 PM - Arrival & Cocktails</strong> — Informal mingling as guests arrive</li>
+      <li><strong>6:30 PM - Dinner Service Begins</strong> — Multi-course meal with structured presentations</li>
+      <li><strong>Course by Course</strong> — Each founder presents their business and key challenges during a dinner course, sparking table discussion and collaborative problem-solving</li>
+      <li><strong>8:30 PM - The Pledge</strong> — Service providers and investors pledge their support—cash, services, introductions, or valuable perks</li>
+      <li><strong>9:00 PM - Wrap Up</strong> — Exchange contacts and plan follow-ups</li>
+    </ul>
+    <h3>What to Expect</h3>
+    <p><strong>As a Founder:</strong> You'll present your business and challenges during one of the dinner courses. Come prepared to be vulnerable about what you need most—whether it's capital, expertise, introductions, or strategic advice. The table is here to help.</p>
+    <p><strong>As a Service Provider or Investor:</strong> Come ready to give generously. During the dinner courses, listen deeply and offer insights. At the end of the evening, pledge tangible support—cash, discounted services, introductions, or whatever resources you can provide. The goal is radical support, not sales pitches.</p>
+  </section>
+
+  <!-- Previous Events -->
+  <section class="section" id="previous">
+    <h2>Previous Events</h2>
+    
+    <!-- 2024 Event -->
+    <div style="margin-top: 30px;">
+      <h3>2024 Event</h3>
+      <div class="two-column" style="align-items: center;">
+        <div class="content">
+          <a href="https://docs.google.com/document/d/1RgN1QS7V4XFFdyWIC_hlJ99PYEU0niGRC_vft6ZzsOI/edit?tab=t.0" target="_blank" rel="noopener noreferrer" style="display: block; transition: transform 0.2s;">
+            <img src="https://storage.googleapis.com/centered-website/assets/startupdinner/2024recapthumbnail.png" alt="2024 Startup Dinner Recap" style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.2); cursor: pointer;">
+          </a>
+          <p style="margin-top: 10px; color: #666; text-align: center;">Click to read the full recap</p>
+        </div>
+        <div class="video-wrapper">
+          <div class="stats" style="margin: 0;">
+            <div class="stat-item">
+              <p class="stat-number">2</p>
+              <p class="stat-label">Founders Supported</p>
+            </div>
+            <div class="stat-item">
+              <p class="stat-number">$50K</p>
+              <p class="stat-label">Pledged in Cash, Services & Perks</p>
+            </div>
+          </div>
+          <div style="margin-top: 30px;">
+            <h4 style="font-size: 0.9em; text-transform: uppercase; color: #666; margin-bottom: 15px; text-align: center;">Sponsored by</h4>
+            <!-- TODO: Replace with actual sponsor website URLs -->
+            <div style="display: flex; gap: 30px; justify-content: center; align-items: center; flex-wrap: wrap;">
+              <a href="https:/cityinnovations.com" target="_blank" rel="noopener noreferrer">
+                <img src="https://storage.googleapis.com/centered-website/assets/startupdinner/citylogoblack.png" alt="Sponsor 1" style="max-width: 120px; height: auto; opacity: 0.8; transition: opacity 0.2s;">
+              </a>
+              <a href="https://lakeshoreadvantage.com/surge/" target="_blank" rel="noopener noreferrer">
+                <img src="https://storage.googleapis.com/centered-website/assets/startupdinner/surgelogo.webp" alt="Sponsor 2" style="max-width: 120px; height: auto; opacity: 0.8; transition: opacity 0.2s;">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="section" id="testimonials" style="background: #fafafa;">
+    <h2>What People Say</h2>
+    <div class="grid">
+      <div class="card">
+        <p>"Very honored Bryce, thanks again so much! And thanks for everyone that participated and contributed! Bryce, keep doing what you're doing : )"</p>
+        <p><strong>— Tim Murphy</strong><br>Founder, Audio Radar</p>
+      </div>
+      <div class="card">
+        <p>"Sometimes it's difficult to know if an event was successful... not this time! Thank you, Bryce for orchestrating this 'artificial density' experiment, and to all participants and sponsors for pouring your knowledge and experience onto our startup fires. 🔥 🌱 🔥"</p>
+        <p><strong>— Della Fetzer</strong><br>Founder, Rebel Cultures</p>
+      </div>
+      <div class="card">
+        <p>"Such a magical evening, beautifully curated!"</p>
+        <p><strong>— Rebekah Bakker</strong><br>Service Provider</p>
+      </div>
+      <div class="card">
+        <p>"Thanks for hosting such a wonderful event, Bryce Kaiser! It was a great evening."</p>
+        <p><strong>— Brian Tol</strong><br>Service Provider</p>
+      </div>
+      <div class="card">
+        <p>"Thrilled to support the next generation of West Michigan leaders! Harbor + Main was honored to offer our services at the recent event... Witnessing the passion and dedication of Audio Radar and Rebel Cultures was truly inspiring. Providing services to these incredible startups is a privilege; I can't wait to see them do remarkable things!"</p>
+        <p><strong>— Julie Jackson</strong><br>Service Provider</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Get Involved -->
+  <section class="section" id="apply">
+    <h2>Get Involved</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Founders</h3>
+        <p>Are you an early-stage founder who could benefit from deep connections with experienced operators and investors? Apply to be a featured founder at an upcoming dinner.</p>
+        <a href="mailto:community@centered.team?subject=Startup%20Dinners%20-%20Founder%20Application" class="btn" style="margin: 0; width: 100%; box-sizing: border-box; text-align: center;">Apply as a Founder</a>
+        <p style="font-size: 0.85em; color: #666; margin-top: 10px; text-align: center;">Email community@centered.team</p>
+      </div>
+      <div class="card">
+        <h3>Service Providers & Investors</h3>
+        <p>Are you an experienced operator, advisor, investor, or service provider who wants to support the startup ecosystem? Join us at the table and share your expertise.</p>
+        <a href="mailto:community@centered.team?subject=Startup%20Dinners%20-%20Service%20Provider%20Application" class="btn" style="margin: 0; width: 100%; box-sizing: border-box; text-align: center;">Join the Table</a>
+        <p style="font-size: 0.85em; color: #666; margin-top: 10px; text-align: center;">Email community@centered.team</p>
+      </div>
+      <div class="card">
+        <h3>Sponsors</h3>
+        <p>Help us create more opportunities for founders to connect with the resources they need. Sponsorship includes branding, event access, and more.</p>
+        <a href="mailto:community@centered.team?subject=Startup%20Dinners%20-%20Sponsorship%20Kit" class="btn" style="margin: 0; width: 100%; box-sizing: border-box; text-align: center;">Request Sponsor Kit</a>
+        <p style="font-size: 0.85em; color: #666; margin-top: 10px; text-align: center;">Email community@centered.team</p>
+      </div>
+    </div>
+    <br />
+    <br />
+    <p>Have questions?<br>Email: <a href="mailto:community@centered.team">community@centered.team</a></p>
+  </section>
+
+ 
+</body>
+</html>
+
