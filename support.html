@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Centered - Support</title>
+  <meta name="description" content="Support for Centered mobile app users." />
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #fafafa;
+      --text: #000;
+      --muted: #666;
+      --rule: #d9d9d9;
+      --accent: #f00;
+      --maxw: 62ch;
+      --pad-x: clamp(1rem, 5vw, 15%);
+    }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font: 16px/1.6 'Montserrat', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: var(--text); font-weight: 700; text-decoration: none; }
+    a:hover { color: var(--accent); }
+    a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+    .page { padding: 6vh var(--pad-x); }
+    header, main, footer { margin: 0 auto; max-width: var(--maxw); }
+    h1 { font-size: clamp(2rem, 4.5vw, 2.75rem); margin: 0 0 .5rem; font-weight: bold; }
+    h2 { font-size: 1.35rem; margin: 2.25rem 0 .5rem; }
+    p { margin: .75rem 0; }
+    hr { border: 0; border-top: 1px solid var(--rule); margin: 1.75rem 0; }
+    footer { color: var(--muted); font-size: .825rem; padding: 2rem 0 4rem; }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header aria-label="Site header">
+      <h1><a href="index.html">centered</a></h1>
+    </header>
+
+    <main id="content">
+        <hr />
+        
+        <h2>App Support</h2>
+        <p>Need help with the Centered mobile app?</p>
+        <p>Please email our team at <a href="mailto:software@centered.team">software@centered.team</a> with your questions or support requests.</p>
+        <p>We aim to respond to all inquiries within 24 hours.</p>
+
+    </main>
+
+    <footer>
+      &copy; 2025 Centered. Seriously good ventures.
+    </footer>
+  </div>
+</body>
+</html>
