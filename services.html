@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Operator Support Services | Centered</title>
+  <meta name="description" content="Launch your startup in weeks, not months. Centered is your fractional co-founder with proven playbooks, AI, and hands-on execution." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #fafafa;
+      --text: #000;
+      --muted: #666;
+      --rule: #d9d9d9;
+      --accent: #000;
+      --maxw: 62ch;
+      --pad-x: clamp(1rem, 4vw, 15%);
+      --card-bg: #fff;
+      --card-border: #e5e5e5;
+    }
+    
+    @media (max-width: 480px) {
+      :root {
+        --pad-x: 1rem;
+      }
+    }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font: 16px/1.6 'Montserrat', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: var(--text); font-weight: 700; text-decoration: none; }
+    a:hover { color: var(--accent); }
+    a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+    .page { padding: 4vh var(--pad-x); }
+    @media (max-width: 768px) {
+      .page { padding: 3vh var(--pad-x); }
+    }
+    header, main, footer { margin: 0 auto; max-width: var(--maxw); }
+    h1 { font-size: clamp(1.75rem, 4.5vw, 2.75rem); margin: 0 0 .5rem; font-weight: bold; }
+    h2 { font-size: clamp(1.2rem, 3vw, 1.35rem); margin: 1.75rem 0 .5rem; }
+    h3 { font-size: clamp(1.05rem, 2.5vw, 1.15rem); margin: 1.25rem 0 .5rem; font-weight: 700; }
+    p { margin: .75rem 0; }
+    hr { border: 0; border-top: 1px solid var(--rule); margin: 1.5rem 0; }
+    @media (max-width: 768px) {
+      hr { margin: 1.25rem 0; }
+    }
+    footer { color: var(--muted); font-size: .825rem; padding: 2rem 0 3rem; }
+    @media (max-width: 768px) {
+      footer { padding: 1.5rem 0 2rem; }
+    }
+    
+    /* Page Label */
+    .page-label {
+      font-size: 0.875rem;
+      color: var(--muted);
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.5rem;
+    }
+    @media (max-width: 768px) {
+      .page-label {
+        font-size: 0.8rem;
+      }
+    }
+    
+    /* Hero Section */
+    .hero {
+      margin: 1.5rem 0 3rem;
+    }
+    @media (max-width: 768px) {
+      .hero {
+        margin: 1rem 0 2rem;
+      }
+    }
+    .hero h1 { margin-top: 0; }
+    .hero-bullets {
+      list-style: none;
+      padding: 0;
+      margin: 1.25rem 0;
+    }
+    @media (max-width: 768px) {
+      .hero-bullets {
+        margin: 1rem 0;
+      }
+    }
+    .hero-bullets li {
+      margin: .6rem 0;
+      padding-left: 1.5rem;
+      font-size: 0.95rem;
+    }
+    @media (max-width: 480px) {
+      .hero-bullets li {
+        font-size: 0.9rem;
+        padding-left: 1.25rem;
+      }
+    }
+    .cta-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin: 1.5rem 0;
+    }
+    @media (max-width: 768px) {
+      .cta-group {
+        margin: 1.25rem 0;
+        gap: 0.75rem;
+      }
+    }
+    .btn {
+      display: inline-block;
+      padding: .75rem 1.5rem;
+      font-weight: 700;
+      text-decoration: none;
+      border-radius: 4px;
+      transition: all 0.2s;
+      min-height: 44px;
+      box-sizing: border-box;
+      text-align: center;
+    }
+    @media (max-width: 768px) {
+      .btn {
+        padding: .7rem 1.25rem;
+        font-size: 0.95rem;
+        width: 100%;
+      }
+    }
+    .btn-primary {
+      background: var(--accent);
+      color: #fff;
+    }
+    .btn-primary:hover {
+      background: #000;
+      color: #fff;
+    }
+    .btn-secondary {
+      background: transparent;
+      border: 2px solid var(--text);
+      color: var(--text);
+    }
+    .btn-secondary:hover {
+      background: var(--text);
+      color: var(--bg);
+    }
+    
+    /* Cards */
+    .card-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      margin: 2rem 0;
+    }
+    @media (min-width: 768px) {
+      .card-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (min-width: 1024px) {
+      .card-grid.three-col {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 8px;
+      padding: 1.5rem;
+    }
+    @media (max-width: 768px) {
+      .card {
+        padding: 1.25rem;
+      }
+    }
+    @media (max-width: 480px) {
+      .card {
+        padding: 1rem;
+      }
+    }
+    .card h3 {
+      margin-top: 0;
+    }
+    .card ul {
+      margin: 1rem 0;
+      padding-left: 1.5rem;
+    }
+    .card li {
+      margin: .5rem 0;
+    }
+    
+    /* Steps */
+    .steps {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.75rem;
+      margin: 2rem 0;
+    }
+    @media (max-width: 768px) {
+      .steps {
+        gap: 1.5rem;
+        margin: 1.5rem 0;
+      }
+    }
+    .step {
+      display: flex;
+      gap: 1rem;
+    }
+    @media (max-width: 480px) {
+      .step {
+        gap: 0.75rem;
+      }
+    }
+    .step-number {
+      flex-shrink: 0;
+      width: 2.5rem;
+      height: 2.5rem;
+      background: var(--accent);
+      color: #fff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 1.1rem;
+    }
+    @media (max-width: 480px) {
+      .step-number {
+        width: 2.25rem;
+        height: 2.25rem;
+        font-size: 1rem;
+      }
+    }
+    .step-content h3 {
+      margin-top: 0;
+    }
+    
+    /* Pricing Grid */
+    .pricing-section {
+      margin: 2rem 0;
+    }
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      margin: 2rem 0;
+    }
+    .pricing-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 8px;
+      padding: 2rem;
+    }
+    @media (max-width: 768px) {
+      .pricing-card {
+        padding: 1.5rem;
+      }
+    }
+    @media (max-width: 480px) {
+      .pricing-card {
+        padding: 1.25rem;
+      }
+    }
+    .pricing-card h3 {
+      margin-top: 0;
+    }
+    .pricing-price {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin: 1rem 0;
+      color: var(--accent);
+    }
+    .pricing-card ul {
+      margin: 1.5rem 0;
+      padding-left: 1.5rem;
+    }
+    .pricing-card .btn {
+      width: 100%;
+      text-align: center;
+      margin-top: 1.5rem;
+    }
+    
+    /* Feature Cards */
+    .feature-cards {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      margin: 2rem 0;
+    }
+    
+    /* Why Section */
+    .why-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      margin: 2rem 0;
+    }
+    @media (min-width: 768px) {
+      .why-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    .why-item h3 {
+      margin-top: 0;
+    }
+    
+    /* Final CTA */
+    .final-cta {
+      text-align: center;
+      padding: 2.5rem 0;
+      margin: 2.5rem 0;
+    }
+    @media (max-width: 768px) {
+      .final-cta {
+        padding: 2rem 0;
+        margin: 2rem 0;
+      }
+    }
+    @media (max-width: 480px) {
+      .final-cta {
+        padding: 1.5rem 0;
+        margin: 1.5rem 0;
+      }
+    }
+    .final-cta .cta-group {
+      justify-content: center;
+    }
+    @media (max-width: 768px) {
+      .final-cta .cta-group {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header aria-label="Site header">
+      <nav style="margin-bottom: 1rem; font-size: 0.875rem;">
+        <a href="index.html" style="text-decoration: none; color: #333;">Home</a> &gt; Operator Support Services
+      </nav>
+      <style>
+        @media (max-width: 480px) {
+          nav {
+            font-size: 0.8rem !important;
+            margin-bottom: 0.75rem !important;
+          }
+        }
+      </style>
+      <div class="page-label">Operator Support Services</div>
+    </header>
+
+    <main id="content">
+      <!-- Hero Section -->
+      <section class="hero">
+        <h1>Launch your startup in weeks, not months.</h1>
+        <p><strong>Centered is your fractional co-founder.</strong> We use proven playbooks, AI, and hands-on execution to take you from idea → operational → revenue-ready — without agency bloat.</p>
+        <ul class="hero-bullets">
+          <li>✅ 50-step playbook from "idea" to "launch-ready"</li>
+          <li>✅ Incorporation, email, brand, prototype, CRM & sales materials</li>
+          <li>✅ Optional add-ons: accounting, dev sprints, video storytelling</li>
+          <li>✅ Transparent pricing + modular support — pay only for what you need</li>
+        </ul>
+        <div class="cta-group">
+          <a href="https://calendar.app.google/zf8PPd6fpsCJWk9j7" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Book a Launch Call</a>
+        </div>
+      </section>
+
+      <hr style="border-color: #ccc"/>
+
+      <!-- Who This Is For -->
+      <section aria-labelledby="who-h">
+        <h2 id="who-h">Built for first-time founders building tech-enabled services</h2>
+        <p><strong>This is for you if:</strong></p>
+        <ul>
+          <li>You have a clear idea but don't know where to start</li>
+          <li>You're tired of vague advice and want someone to actually build with you</li>
+          <li>You don't want to burn $25k+ on agencies before you even launch</li>
+          <li>You want a clear, step-by-step checklist and a partner to keep you moving</li>
+        </ul>
+        <p><strong>You don't need a co-founder yet. You need momentum.</strong></p>
+      </section>
+
+      <hr style="border-color: #ccc"/>
+
+      <!-- What We Actually Do -->
+      <section aria-labelledby="playbook-h" id="playbook">
+        <h2 id="playbook-h">A 50-step launch playbook — done with you.</h2>
+        <div class="card-grid">
+          <div class="card">
+            <h3>Clarity & Validation</h3>
+            <p>We sharpen your idea into a real, testable offer.</p>
+            <ul>
+              <li>Problem + solution statements</li>
+              <li>Early adopter persona</li>
+              <li>Competitor + alternatives scan</li>
+              <li>Discovery call scripts</li>
+              <li>Fastest Marketable Product (FMP) plan</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Business & Digital Identity</h3>
+            <p>We make you a real company — not just a Google Doc.</p>
+            <ul>
+              <li>Incorporation & compliance (via Firstbase)</li>
+              <li>Google Workspace (email, shared drives, folders)</li>
+              <li>Domain, mini brand kit, email signatures</li>
+              <li>Cap table & documentation hub</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Prototype & Product Foundations</h3>
+            <p>We build something your customers can actually touch.</p>
+            <ul>
+              <li>User stories & flows</li>
+              <li>Wireframes</li>
+              <li>No-code prototype (Webflow / Notion / Airtable)</li>
+              <li>Basic automations & backend</li>
+              <li>Demo video for sales & testing</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>GTM & Sales Enablement</h3>
+            <p>We set you up to sell early, not "someday."</p>
+            <ul>
+              <li>CRM setup</li>
+              <li>Sales one-pager</li>
+              <li>5–8 slide sales deck</li>
+              <li>Outreach & demo scripts</li>
+              <li>Early adopter lead list & pricing model</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Testing & First Revenue</h3>
+            <p>We help you ship, learn, and iterate.</p>
+            <ul>
+              <li>Discovery & demo calls</li>
+              <li>Concierge MVP delivery</li>
+              <li>Feedback synthesis</li>
+              <li>Updated blueprint, landing page, and pricing</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <hr style="border-color: #ccc"/>
+
+      <!-- How It Works -->
+      <section aria-labelledby="how-h">
+        <h2 id="how-h">How working with Centered works</h2>
+        <div class="steps">
+          <div class="step">
+            <div class="step-number">1</div>
+            <div class="step-content">
+              <h3>Map what you already have</h3>
+              <p>We walk through the 50-step checklist and mark what's already done. You only pay for what you're missing.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-number">2</div>
+            <div class="step-content">
+              <h3>Build the critical pieces</h3>
+              <p>We prioritize and execute the next 10–20 steps together — launch infrastructure, prototype, GTM foundations.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-number">3</div>
+            <div class="step-content">
+              <h3>Launch and iterate</h3>
+              <p>We help you get your first users, run experiments, and refine the product and offer.</p>
+            </div>
+          </div>
+        </div>
+        <p style="text-align: center; margin-top: 2rem;">
+          <a href="https://calendar.app.google/zf8PPd6fpsCJWk9j7" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Start with a Free Assessment Call</a>
+        </p>
+      </section>
+
+      <hr style="border-color: #ccc"/>
+
+      <!-- Packages & Pricing -->
+      <section aria-labelledby="pricing-h" class="pricing-section">
+        <h2 id="pricing-h">Pick the level of support you need</h2>
+        <div class="pricing-grid">
+          <div class="pricing-card">
+            <h3>Starter Sprint</h3>
+            <p><strong>For idea-stage founders.</strong></p>
+            <ul>
+              <li>Clarify concept & value prop</li>
+              <li>Persona, competitor snapshot</li>
+              <li>Simple landing page</li>
+              <li>30-day plan</li>
+            </ul>
+            <div class="pricing-price">From $299–$499</div>
+            <a href="https://calendar.app.google/zf8PPd6fpsCJWk9j7" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Start with Starter Sprint</a>
+          </div>
+          <div class="pricing-card">
+            <h3>Launch-Ready Package</h3>
+            <p><strong>For founders ready to go live.</strong></p>
+            <p>Everything in Starter Sprint, plus:</p>
+            <ul>
+              <li>Incorporation & digital identity</li>
+              <li>Workspace, domain, mini brand kit</li>
+              <li>No-code prototype & demo</li>
+              <li>Attio CRM setup</li>
+              <li>Sales one-pager + deck + scripts</li>
+            </ul>
+            <div class="pricing-price">From $2,500–$3,500</div>
+            <a href="https://calendar.app.google/zf8PPd6fpsCJWk9j7" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Talk About Launch-Ready</a>
+          </div>
+          <div class="pricing-card">
+            <h3>Fractional Co-Founder</h3>
+            <p><strong>For founders who want an ongoing build partner.</strong></p>
+            <ul>
+              <li>Ongoing strategy & execution</li>
+              <li>Product + GTM + ops support</li>
+              <li>Weekly/bi-weekly working sessions</li>
+              <li>Custom experiments & growth loops</li>
+            </ul>
+            <div class="pricing-price">From $1,500–$5,000/month</div>
+            <a href="https://calendar.app.google/zf8PPd6fpsCJWk9j7" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Apply for Fractional Support</a>
+          </div>
+        </div>
+        <p style="text-align: center; color: var(--muted); font-size: .9rem; margin-top: 1rem;">
+          We also offer a limited number of venture studio partnerships (equity + deeper involvement).
+        </p>
+      </section>
+
+      <hr style="border-color: #ccc"/>
+
+      <!-- Optional Add-On Services -->
+      <section aria-labelledby="addons-h">
+        <h2 id="addons-h">Optional services when you're ready to go deeper</h2>
+        <div class="feature-cards">
+          <div class="card">
+            <h3>Accounting</h3>
+            <div class="pricing-price" style="font-size: 1.2rem;">From $299/mo</div>
+            <p>Professional bookkeeping and tax support powered by Firstbase Accounting, with Centered's oversight and founder-friendly reporting.</p>
+          </div>
+          <div class="card">
+            <h3>Software Development</h3>
+            <div class="pricing-price" style="font-size: 1.2rem;">From $1,500/week</div>
+            <p>AI-accelerated engineering sprints to build features, integrations, dashboards, and core product workflows.</p>
+          </div>
+          <div class="card">
+            <h3>Video Storytelling</h3>
+            <ul>
+              <li><strong>Starter Story Pack</strong> — $349 (3 short-form founder story videos)</li>
+              <li><strong>Monthly Social Accelerator</strong> — $749–$1,500/mo (8–16 clips, scripts, editing, ready to post)</li>
+            </ul>
+            <p style="margin-top: 1rem; font-size: .9rem;">Turn your journey and your customers' results into content that drives trust and inbound interest.</p>
+          </div>
+        </div>
+      </section>
+
+      <hr style="border-color: #ccc"/>
+
+      <!-- Why Centered -->
+      <section aria-labelledby="why-h">
+        <h2 id="why-h">Why founders work with Centered instead of agencies</h2>
+        <div class="why-grid">
+          <div class="why-item">
+            <h3>We build, not just advise.</h3>
+            <p>We're your execution partner, not just another strategist.</p>
+          </div>
+          <div class="why-item">
+            <h3>AI-native workflows.</h3>
+            <p>We design everything to be fast, lean, and automatable.</p>
+          </div>
+          <div class="why-item">
+            <h3>Modular & transparent.</h3>
+            <p>You see the full checklist, costs, and next steps at all times.</p>
+          </div>
+        </div>
+      </section>
+
+      <hr style="border-color: #ccc"/>
+
+      <!-- Self-Serve Portal -->
+      <section aria-labelledby="portal-h" id="checklist">
+        <h2 id="portal-h">A home base for your startup</h2>
+        <p>Every founder gets access to a guided portal with the full 50-step checklist. Mark what you've already done, see your progress, track deliverables, and always know your next best action.</p>
+        <ul>
+          <li>Interactive checklist</li>
+          <li>Status on each artifact (drafted / in review / done)</li>
+          <li>Cost transparency and options (DIY vs done-with-you)</li>
+          <li>Links to resources, templates, and recordings</li>
+        </ul>
+      </section>
+
+      <hr style="border-color: #ccc"/>
+
+      <!-- Final CTA -->
+      <section class="final-cta" id="contact">
+        <h2>Ready to stop stalling and start building?</h2>
+        <p>You don't need to figure everything out alone or hire a $50k agency. With Centered, you get a clear checklist, a fractional co-founder, and a path to your first customers.</p>
+        <div class="cta-group">
+          <a href="https://calendar.app.google/zf8PPd6fpsCJWk9j7" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Book a Launch Call</a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      &copy; 2026 Centered. Seriously good ventures.
+    </footer>
+  </div>
+</body>
+</html>
+
