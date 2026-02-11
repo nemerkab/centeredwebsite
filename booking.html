@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Book a Call | Centered</title>
+  <meta name="description" content="Schedule a call with Centered to discuss your startup launch and how we can help you go from idea to revenue-ready." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #fafafa;
+      --text: #000;
+      --muted: #666;
+      --rule: #d9d9d9;
+      --accent: #000;
+      --maxw: 62ch;
+      --pad-x: clamp(1rem, 4vw, 15%);
+    }
+    
+    @media (max-width: 480px) {
+      :root {
+        --pad-x: 1rem;
+      }
+    }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font: 16px/1.6 'Montserrat', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: var(--text); font-weight: 700; text-decoration: none; }
+    a:hover { color: var(--accent); }
+    a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+    .page { padding: 4vh var(--pad-x); }
+    @media (max-width: 768px) {
+      .page { padding: 3vh var(--pad-x); }
+    }
+    header, main, footer { margin: 0 auto; max-width: var(--maxw); }
+    h1 { font-size: clamp(1.75rem, 4.5vw, 2.75rem); margin: 0 0 .5rem; font-weight: bold; }
+    p { margin: .75rem 0; }
+    footer { color: var(--muted); font-size: .825rem; padding: 2rem 0 3rem; }
+    @media (max-width: 768px) {
+      footer { padding: 1.5rem 0 2rem; }
+    }
+    
+    /* Calendar Container */
+    .calendar-container {
+      margin: 2rem 0;
+      width: 100%;
+      max-width: 62ch;
+    }
+    
+    .calendar-container iframe {
+      width: 100%;
+      height: 600px;
+      border: 1px solid var(--rule);
+      border-radius: 8px;
+    }
+    
+    @media (max-width: 768px) {
+      .calendar-container iframe {
+        height: 500px;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .calendar-container iframe {
+        height: 450px;
+      }
+    }
+  </style>
+  <!-- Privacy-friendly analytics by Plausible -->
+  <script async src="https://plausible.io/js/pa-n-VRlYtUZrRN2RKqkRwrO.js"></script>
+  <script>
+    window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+    plausible.init()
+  </script>
+</head>
+<body>
+  <div class="page">
+    <header aria-label="Site header">
+      <nav style="margin-bottom: 1rem; font-size: 0.875rem;">
+        <a href="index.html" style="text-decoration: none; color: #333;">Home</a> &gt; 
+        <a href="services.html" style="text-decoration: none; color: #333;">Services</a> &gt; 
+        Book a Call
+      </nav>
+      <style>
+        @media (max-width: 480px) {
+          nav {
+            font-size: 0.8rem !important;
+            margin-bottom: 0.75rem !important;
+          }
+        }
+      </style>
+    </header>
+
+    <main id="content">
+      <h1>Book a Call with Centered</h1>
+      <p>Choose a time that works for you to discuss your startup launch and how Centered can help you go from idea to revenue-ready.</p>
+      
+      <div class="calendar-container">
+        <iframe src="https://calendar.app.google/N5vyyh3UhSrL5zWj9" frameborder="0"></iframe>
+      </div>
+    </main>
+
+    <footer>
+      &copy; 2026 Centered. Seriously good ventures.
+    </footer>
+  </div>
+</body>
+</html>
